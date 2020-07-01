@@ -25,7 +25,7 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_it_has_dishes
-    
+
     restaurant = Restaurant.new('10:00', 'Fuel Cafe')
 
     assert_equal [], restaurant.dishes
@@ -33,7 +33,7 @@ class RestaurantTest < Minitest::Test
 
   #Iteration 2 Tests:
   def test_it_has_closing_time
-    skip
+
     restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
     restaurant2 = Restaurant.new('16:00', 'Il Poggio')
 
@@ -42,7 +42,7 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_it_can_add_dishes
-    skip
+
     restaurant = Restaurant.new('16:00', 'Il Poggio')
 
     restaurant.add_dish('Burrata')
@@ -51,4 +51,41 @@ class RestaurantTest < Minitest::Test
 
     assert_equal ['Burrata', 'Pizzetta', 'Ravioli'], restaurant.dishes
   end
+
+
+  def test_open_for_lunch
+
+    restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+
+    assert_equal restaurant2, restaurant.open_for_lunch
+  end
+
+  def test_add_dish
+    restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
+    restaurant2 = Restaurant.new('16:00', 'Il Posto')
+
+    restaurant1.add_dish('Burrata')
+
+    assert_equal# I got kinda stuck here and ran out of time
+
+
+
+
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
 end
