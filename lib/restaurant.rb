@@ -5,6 +5,10 @@ class Restaurant
   def initialize (opening_time, name )
     @opening_time = opening_time
     @name = name
-    @dishes = [] 
+    @dishes = []
+  end
+
+  def closing_time(time)
+    (((@opening_time.to_i) + time).to_s) +":00"
   end
 end
